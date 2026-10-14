@@ -1,14 +1,19 @@
 #include <bits/stdc++.h>
 #define int long long
-#define MAXX
+#define MAXX 502
 using namespace std;
+
+int n, a[MAXX][MAXX];
 
 void solve() {
 
 }
 
 void read() {
-    
+    cin >> n;
+    for(int i = 1; i <= n; i++)
+        for(int j = 1; j <= n; j++)
+            cin >> a[i][j];
 }
 
 void file() {
