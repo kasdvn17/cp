@@ -1,14 +1,22 @@
 #include <bits/stdc++.h>
 #define int long long
-#define MAXX
+#define MAXX 200005
 using namespace std;
 
-void solve() {
+int n, m, a[MAXX];
 
+void solve() {
+    int l = 1, cur = 0, res = 0;
+    for(int r = 1; r <= n; r++) {
+        cur += a[l];
+        
+    }
 }
 
 void read() {
-    
+    cin >> n >> m;
+    for(int i = 1; i <= n; i++)
+        cin >> a[i];
 }
 
 void file() {
