@@ -4,11 +4,11 @@ Personal archive of code solutions and competitive programming problem sets auto
 
 ## 📊 Overview
 
-- **Total Solutions:** 15
-- **Languages:** C++ (15), Python (0)
-- **Categories / Groups (4):** CSES (6), MarisaOJ (6), CodeDream (2), Codeforces (1)
-- **Solutions Backed Up In Repository:** 13 / 15 (2 excluded)
-- **Last Synced:** 10/13/2026 10:15:37 PM
+- **Total Solutions:** 19
+- **Languages:** C++ (19), Python (0)
+- **Categories / Groups (5):** CSES (6), MarisaOJ (6), VJudge (3), Codeforces (2), CodeDream (2)
+- **Solutions Backed Up In Repository:** 17 / 19 (2 excluded)
+- **Last Synced:** 10/14/2026 9:43:22 AM
 
 ---
 *Synced automatically by CIDE Code Editor*
