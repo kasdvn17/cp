@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 #define int long long
-#define MAXX 300005
+#define MAXX 400005
 using namespace std;
 
 struct C {
@@ -14,12 +14,14 @@ C cm[MAXX];
 
 int queryMax(int l, int r, int sp[20][MAXX]) {
     if(l > r)
-        return 0;
+        return -1e18;
     int lg = __lg(r - l + 1);
     return max(sp[lg][l], sp[lg][r - (1 << lg) + 1]);
 }
 
 int queryMin(int l, int r, int sp[20][MAXX]) {
+    if(l > r)
+        return 1e18;
     int lg = __lg(r - l + 1);
     return min(sp[lg][l], sp[lg][r - (1 << lg) + 1]);
 }
@@ -69,7 +71,7 @@ void dnc(int l, int r) {
 }
 
 void solve() {
-    cm[n + 1].d = cm[n].d;
+    cm[n + 1].d = 1e15;
     for(int i = 1; i <= n; i++) {
         cm[i].c = a - cm[i].c;
         cm[i].diff = (cm[i + 1].d - cm[i].d) * (cm[i + 1].d - cm[i].d);
@@ -82,7 +84,7 @@ void solve() {
         spMinPf[0][i] = pf[i];
     }
     for(int lg = 1; lg < 20; lg++)
-        for(int i = 1; i + (1 << lg) - 1 <= n; i++) {
+        for(int i = 0; i + (1 << lg) - 1 <= n; i++) {
             spDiff[lg][i] = max(spDiff[lg - 1][i], spDiff[lg - 1][i + (1 << (lg - 1))]);
             spPf[lg][i] = max(spPf[lg - 1][i], spPf[lg - 1][i + (1 << (lg - 1))]);
             spMinPf[lg][i] = min(spMinPf[lg - 1][i], spMinPf[lg - 1][i + (1 << (lg - 1))]);
