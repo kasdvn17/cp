@@ -27,14 +27,14 @@ void solve() {
     bool processing = true;
     while(processing) {
         processing = false;
+        processes.clear();
         for(int i = 1; i <= q; i++) {
             if(queries[i].l > queries[i].r)
                 continue;
             processing = true;
             processes.push_back({(queries[i].l + queries[i].r) >> 1, i});
         }
-        
-        processes.clear();
+        sort(processes.begin(), processes.end());
     }
 }
 
