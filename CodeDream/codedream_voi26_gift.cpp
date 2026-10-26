@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
-#define ll long long
-#define int long long
+#pragma GCC optimize("O3", "unroll-loops")
+#define ll long
+#define int long
 #define MAXX 100001
 using namespace std;
 
@@ -18,18 +19,18 @@ struct ST {
     ll sl2, x2;
 };
 
-int n, q;
+int n, q, sms;
 ll TOT, cnt[MAXX], finres[MAXX];
 G a[MAXX];
 Q queries[MAXX];
-vector<pair<ll, int>> processes;
+priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> processes;
 ST seg[4 * MAXX];
 
 bool cmpG(G x, G y) {
     return x.s < y.s;
 }
 
-ST merge(ST x, ST y) {
+ST merge(const ST& x, const ST& y) {
     return {x.sl + y.sl, x.x + y.x, x.sl2 + y.sl2, x.x2 + y.x2};
 }
 
@@ -44,35 +45,24 @@ void build(int idx, int l, int r) {
     seg[idx] = merge(seg[2 * idx], seg[2 * idx + 1]);
 }
 
-void update(int idx, int l, int r, int pos, int val, int type) {
+void update(int idx, int l, int r, int pos, int typ1, int typ2) {
     if(l > pos || r < pos)
         return;
     if(l == r) {
-        if(type == 1)
-            seg[idx].sl += val,
-            seg[idx].x = l * seg[idx].sl;
-        else
-            seg[idx].sl2 += val,
-            seg[idx].x2 = l * seg[idx].sl2;
+        seg[idx].sl += typ1,
+        seg[idx].x += l * typ1;
+        seg[idx].sl2 += typ2,
+        seg[idx].x2 += l * typ2;
         return;
     }
     int mid = (l + r) >> 1;
-    update(2 * idx, l, mid, pos, val, type);
-    update(2 * idx + 1, mid + 1, r, pos, val, type);
+    update(2 * idx, l, mid, pos, typ1, typ2);
+    update(2 * idx + 1, mid + 1, r, pos, typ1, typ2);
     seg[idx] = merge(seg[2 * idx], seg[2 * idx + 1]);
 }
 
-ST query(int idx, int l, int r, int s, int e) {
-    if(l > e || r < s)
-        return {0, 0, 0, 0};
-    if(l >= s && r <= e)
-        return seg[idx];
-    int mid = (l + r) >> 1;
-    return merge(query(2 * idx, l, mid, s, e), query(2 * idx + 1, mid + 1, r, s, e));
-}
-
 // walk de tim rea
-ll walk(int idx, int l, int r, ll T, ll M) {
+ll walk(int idx, int l, int r, const ll& T, const ll& M) {
     ll tw = seg[idx].x + seg[idx].x2 * T;
     if (tw <= M)
         return seg[idx].sl + seg[idx].sl2 * T;
@@ -87,9 +77,6 @@ ll walk(int idx, int l, int r, ll T, ll M) {
 }
 
 void solve() {
-    int sms = 0;
-    for(int i = 1; i <= n; i++)
-        a[i].idx = i, TOT = max(TOT, a[i].w), sms += a[i].s, cnt[a[i].w]++;
     for(int i = 1; i <= q; i++) {
         queries[i].ans = 0, queries[i].idx = i;
         if(queries[i].type == 1)
@@ -101,23 +88,22 @@ void solve() {
     sort(a + 1, a + n + 1, cmpG);
     while(processing) {
         processing = false;
-        processes.clear();
         for(int i = 1; i <= q; i++) {
             if(queries[i].l > queries[i].r)
                 continue;
             processing = true;
-            processes.push_back({(queries[i].l + queries[i].r) >> 1, i});
+            processes.push({(queries[i].l + queries[i].r) >> 1, i});
         }
-        sort(processes.begin(), processes.end());
         build(1, 1, TOT);
         // tai T = 0
         // for(int i = 1; i <= n; i++)
         //     update(1, 1, TOT, a[i].w, 1, 2);
         int l = 1;
-        for(auto [T, idx] : processes) {
+        while(processes.size()) {
+            auto [T, idx] = processes.top();
+            processes.pop();
             while(l <= n && a[l].s < T) {
-                update(1, 1, TOT, a[l].w, -1, 2);
-                update(1, 1, TOT, a[l].w, a[l].s, 1);
+                update(1, 1, TOT, a[l].w, a[l].s, -1);
                 l++;
             }
             ll M = queries[idx].m, K = queries[idx].k;
@@ -133,8 +119,7 @@ void solve() {
     }
     for(int i = 1; i <= q; i++) {
         if(queries[i].type == 1) {
-            if(queries[i].ans >= queries[i].t) finres[queries[i].idx] = 1;
-            else finres[queries[i].idx] = 0;
+            finres[queries[i].idx] = (int)(queries[i].ans >= queries[i].t);
         } else finres[queries[i].idx] = queries[i].ans;
     }
     for(int i = 1; i <= q; i++)
@@ -144,9 +129,9 @@ void solve() {
 void read() {
     cin >> n >> q;
     for(int i = 1; i <= n; i++)
-        cin >> a[i].w;
+        cin >> a[i].w, TOT = max(TOT, a[i].w), cnt[a[i].w]++;
     for(int i = 1; i <= n; i++)
-        cin >> a[i].s;
+        cin >> a[i].s, sms += a[i].s, a[i].idx = i;
     for(int i = 1; i <= q; i++) {
         cin >> queries[i].type;
         if(queries[i].type == 1)
