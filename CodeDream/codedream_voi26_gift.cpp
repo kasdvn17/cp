@@ -1,5 +1,9 @@
-#include <bits/stdc++.h>
-#pragma GCC optimize("O3", "unroll-loops")
+#pragma GCC optimize("O3,unroll-loops")
+#pragma GCC target("avx2,bmi,bmi2,lzcnt,popcnt")
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <algorithm>
 #define ll long
 #define int long
 #define MAXX 100001
@@ -24,7 +28,8 @@ ll TOT, cnt[MAXX], finres[MAXX];
 G a[MAXX];
 Q queries[MAXX];
 priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> processes;
-ST seg[4 * MAXX];
+ST seg[4 * MAXX], tmp[4 * MAXX];
+vector<pair<int, ST>> builded;
 
 bool cmpG(G x, G y) {
     return x.s < y.s;
@@ -36,13 +41,15 @@ ST merge(const ST& x, const ST& y) {
 
 void build(int idx, int l, int r) {
     if(l == r) {
-        seg[idx] = {0, 0, cnt[l], l * cnt[l]};
+        tmp[idx] = {0, 0, cnt[l], l * cnt[l]};
+        builded.push_back({idx, tmp[idx]});
         return;
     }
     int mid = (l + r) >> 1;
     build(2 * idx, l, mid);
     build(2 * idx + 1, mid + 1, r);
-    seg[idx] = merge(seg[2 * idx], seg[2 * idx + 1]);
+    tmp[idx] = merge(tmp[2 * idx], tmp[2 * idx + 1]);
+    builded.push_back({idx, tmp[idx]});
 }
 
 void update(int idx, int l, int r, int pos, int typ1, int typ2) {
@@ -86,6 +93,7 @@ void solve() {
     }
     bool processing = true;
     sort(a + 1, a + n + 1, cmpG);
+    build(1, 1, TOT);
     while(processing) {
         processing = false;
         for(int i = 1; i <= q; i++) {
@@ -94,10 +102,8 @@ void solve() {
             processing = true;
             processes.push({(queries[i].l + queries[i].r) >> 1, i});
         }
-        build(1, 1, TOT);
-        // tai T = 0
-        // for(int i = 1; i <= n; i++)
-        //     update(1, 1, TOT, a[i].w, 1, 2);
+        for(auto [idx, S] : builded)
+            seg[idx] = S;
         int l = 1;
         while(processes.size()) {
             auto [T, idx] = processes.top();
