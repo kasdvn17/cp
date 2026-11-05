@@ -4,18 +4,18 @@ Personal archive of code solutions and competitive programming problem sets auto
 
 ## 📊 Overview
 
-- **Total Solutions:** 148
-- **Languages:** C++ (148), Python (0)
-- **Categories / Groups (10):** Codeforces (40), Tuyển QG 2026 (37), CodeDream (30), VJudge (11), MarisaOJ (11), AtCoder Edu DP (8), CSES (7), HNOJ (2), USACO (1), ClueOJ (1)
-- **Solutions Backed Up In Repository:** 111 / 148 (37 excluded)
-- **Last Synced:** 11/5/2026 12:42:55 AM
+- **Total Solutions:** 150
+- **Languages:** C++ (150), Python (0)
+- **Categories / Groups (10):** Codeforces (40), Tuyển QG 2026 (39), CodeDream (30), VJudge (11), MarisaOJ (11), AtCoder Edu DP (8), CSES (7), HNOJ (2), USACO (1), ClueOJ (1)
+- **Solutions Backed Up In Repository:** 111 / 150 (39 excluded)
+- **Last Synced:** 11/5/2026 4:45:12 PM
 
 ## 📁 Category Folders
 
 | Category / Folder | Trạng thái (Status) | Số lượng bài (Problems) |
 | :--- | :--- | :--- |
 | [📁 `Codeforces/`](./Codeforces) | ✅ *Đã đồng bộ (Synced)* | **40 bài** |
-| [📁 `Tuyển QG 2026/`](./Tuy%E1%BB%83n%20QG%202026) | 🔒 *Thư mục bị ẩn (Hidden)* | Đang có **37 bài** (không đồng bộ mã nguồn) |
+| [📁 `Tuyển QG 2026/`](./Tuy%E1%BB%83n%20QG%202026) | 🔒 *Thư mục bị ẩn (Hidden)* | Đang có **39 bài** (không đồng bộ mã nguồn) |
 | [📁 `CodeDream/`](./CodeDream) | ✅ *Đã đồng bộ (Synced)* | **30 bài** |
 | [📁 `HNOJ/`](./HNOJ) | ✅ *Đã đồng bộ (Synced)* | **2 bài** |
 | [📁 `USACO/`](./USACO) | ✅ *Đã đồng bộ (Synced)* | **1 bài** |
