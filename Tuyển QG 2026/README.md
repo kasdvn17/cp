@@ -11,4 +11,4 @@
 > *Currently, there are **42 problem(s)** stored in this category in CIDE, but the source codes are hidden and excluded from this repository.*
 
 ---
-*Thời gian đồng bộ / Synced at: 11/6/2026 11:19:07 PM*
+*Thời gian đồng bộ / Synced at: 11/6/2026 11:59:54 PM*

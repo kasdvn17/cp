@@ -4,17 +4,17 @@ Personal archive of code solutions and competitive programming problem sets auto
 
 ## 📊 Overview
 
-- **Total Solutions:** 163
-- **Languages:** C++ (163), Python (0)
-- **Categories / Groups (11):** Tuyển QG 2026 (42), Codeforces (41), CodeDream (30), VJudge (11), MarisaOJ (11), HNCode (9), AtCoder Edu DP (8), CSES (7), HNOJ (2), USACO (1), ClueOJ (1)
-- **Solutions Backed Up In Repository:** 121 / 163 (42 excluded)
-- **Last Synced:** 11/6/2026 11:19:07 PM
+- **Total Solutions:** 164
+- **Languages:** C++ (164), Python (0)
+- **Categories / Groups (11):** Codeforces (42), Tuyển QG 2026 (42), CodeDream (30), VJudge (11), MarisaOJ (11), HNCode (9), AtCoder Edu DP (8), CSES (7), HNOJ (2), USACO (1), ClueOJ (1)
+- **Solutions Backed Up In Repository:** 122 / 164 (42 excluded)
+- **Last Synced:** 11/6/2026 11:59:54 PM
 
 ## 📁 Category Folders
 
 | Category / Folder | Trạng thái (Status) | Số lượng bài (Problems) |
 | :--- | :--- | :--- |
-| [📁 `Codeforces/`](./Codeforces) | ✅ *Đã đồng bộ (Synced)* | **41 bài** |
+| [📁 `Codeforces/`](./Codeforces) | ✅ *Đã đồng bộ (Synced)* | **42 bài** |
 | [📁 `Tuyển QG 2026/`](./Tuy%E1%BB%83n%20QG%202026) | 🔒 *Thư mục bị ẩn (Hidden)* | Đang có **42 bài** (không đồng bộ mã nguồn) |
 | [📁 `CodeDream/`](./CodeDream) | ✅ *Đã đồng bộ (Synced)* | **30 bài** |
 | [📁 `HNCode/`](./HNCode) | ✅ *Đã đồng bộ (Synced)* | **9 bài** |
