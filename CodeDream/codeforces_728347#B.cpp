@@ -11,9 +11,10 @@ multiset<int> ms;
 
 void print() {
     long double ans = 1.0 * (*l) + 1.0 * (*r);
-    if(num3 % 2 == 0) ans = 2 * (channum3 - lenum3 - totright + pending) + ans;
-    else ans = 2 * (lenum3 - channum3 + totright + pending) - ans;
     ans /= 2.0;
+    if(num3 % 2 == 0) ans = (channum3 - lenum3 - totright + pending) + ans;
+    else ans = (lenum3 - channum3 + totright + pending) - ans;
+    // ans /= 2.0;
     cout << fixed << setprecision(1) << ans << "\n";
 }
 
