@@ -3,12 +3,12 @@
 > 🔒 **Thông báo: Thư mục bị ẩn (Hidden Folder)**
 >
 > - **Trạng thái:** Thư mục này đang bị ẩn (được chọn loại trừ khi đồng bộ mã nguồn từ **CIDE** lên GitHub).
-> - **Số lượng bài đang có:** Hiện tại danh mục đang có **66 bài tập** được lưu trữ trong CIDE.
+> - **Số lượng bài đang có:** Hiện tại danh mục đang có **71 bài tập** được lưu trữ trong CIDE.
 > - **Chi tiết:** Toàn bộ mã nguồn của các bài tập thuộc danh mục này không được tải lên kho lưu trữ GitHub theo cấu hình của người dùng.
 >
 > ---
 > *Notice: This folder is hidden and excluded from GitHub synchronization.*
-> *Currently, there are **66 problem(s)** stored in this category in CIDE, but the source codes are hidden and excluded from this repository.*
+> *Currently, there are **71 problem(s)** stored in this category in CIDE, but the source codes are hidden and excluded from this repository.*
 
 ---
-*Thời gian đồng bộ / Synced at: 11/15/2026 9:32:02 PM*
+*Thời gian đồng bộ / Synced at: 11/17/2026 5:02:25 PM*
