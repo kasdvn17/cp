@@ -4,17 +4,17 @@ Personal archive of code solutions and competitive programming problem sets auto
 
 ## 📊 Overview
 
-- **Total Solutions:** 240
-- **Languages:** C++ (240), Python (0)
-- **Categories / Groups (12):** Tuyển QG 2026 (88), Codeforces (61), CodeDream (30), VJudge (17), MarisaOJ (11), HNCode (9), AtCoder Edu DP (8), CSES (7), ICPC (6), HNOJ (1), USACO (1), ClueOJ (1)
-- **Solutions Backed Up In Repository:** 152 / 240 (88 excluded)
-- **Last Synced:** 11/25/2026 12:37:47 AM
+- **Total Solutions:** 249
+- **Languages:** C++ (249), Python (0)
+- **Categories / Groups (12):** Tuyển QG 2026 (97), Codeforces (61), CodeDream (30), VJudge (17), MarisaOJ (11), HNCode (9), AtCoder Edu DP (8), CSES (7), ICPC (6), HNOJ (1), USACO (1), ClueOJ (1)
+- **Solutions Backed Up In Repository:** 152 / 249 (97 excluded)
+- **Last Synced:** 11/27/2026 12:56:26 AM
 
 ## 📁 Category Folders
 
 | Category / Folder | Trạng thái (Status) | Số lượng bài (Problems) |
 | :--- | :--- | :--- |
-| [📁 `Tuyển QG 2026/`](./Tuy%E1%BB%83n%20QG%202026) | 🔒 *Thư mục bị ẩn (Hidden)* | Đang có **88 bài** (không đồng bộ mã nguồn) |
+| [📁 `Tuyển QG 2026/`](./Tuy%E1%BB%83n%20QG%202026) | 🔒 *Thư mục bị ẩn (Hidden)* | Đang có **97 bài** (không đồng bộ mã nguồn) |
 | [📁 `Codeforces/`](./Codeforces) | ✅ *Đã đồng bộ (Synced)* | **61 bài** |
 | [📁 `CodeDream/`](./CodeDream) | ✅ *Đã đồng bộ (Synced)* | **30 bài** |
 | [📁 `VJudge/`](./VJudge) | ✅ *Đã đồng bộ (Synced)* | **17 bài** |
