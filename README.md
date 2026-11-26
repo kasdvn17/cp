@@ -8,7 +8,7 @@ Personal archive of code solutions and competitive programming problem sets auto
 - **Languages:** C++ (249), Python (0)
 - **Categories / Groups (12):** Tuyển QG 2026 (97), Codeforces (61), CodeDream (30), VJudge (17), MarisaOJ (11), HNCode (9), AtCoder Edu DP (8), CSES (7), ICPC (6), HNOJ (1), USACO (1), ClueOJ (1)
 - **Solutions Backed Up In Repository:** 152 / 249 (97 excluded)
-- **Last Synced:** 11/27/2026 12:56:26 AM
+- **Last Synced:** 11/27/2026 1:13:45 AM
 
 ## 📁 Category Folders
 
